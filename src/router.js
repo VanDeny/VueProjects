@@ -7,13 +7,19 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
-            path: "/",
+            path: "/about",
             name: "about",
-            component: about
+            component: about,
+            meta: {
+                title: 'About Denis'
+            }
         },
         {
-            path: "/todo",
+            path: "/todoApp",
             name: "todo",
+            meta: {
+                title: 'Todo app'
+            },
 
             component: () =>
                 import("./views/todo.vue")
